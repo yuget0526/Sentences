@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_1" data-name="レイヤー_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 1449 1888.5">
+  <!-- Generator: Adobe Illustrator 29.4.0, SVG Export Plug-In . SVG Version: 2.1.0 Build 152)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #cdcece;
+      }
+
+      .st1 {
+        fill: url(#_名称未設定グラデーション_3);
+      }
+
+      .st2 {
+        fill: url(#_名称未設定グラデーション_2);
+      }
+
+      .st3 {
+        fill: none;
+      }
+
+      .st4 {
+        fill: #363837;
+      }
+
+      .st5 {
+        fill: #e3e6e5;
+      }
+
+      .st6 {
+        fill: #898a8c;
+      }
+
+      .st7 {
+        fill: url(#_名称未設定グラデーション);
+      }
+    </style>
+    <linearGradient id="_名称未設定グラデーション" data-name="名称未設定グラデーション" x1="3210" y1="-332.5" x2="3210" y2="-403.5" gradientTransform="translate(1677.5 3213.5) rotate(-90)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".07" stop-color="#6b6b6b"/>
+      <stop offset=".11" stop-color="#797979"/>
+      <stop offset=".21" stop-color="#919191"/>
+      <stop offset=".3" stop-color="#a2a2a2"/>
+      <stop offset=".41" stop-color="#acacac"/>
+      <stop offset=".54" stop-color="#b0b0b0"/>
+      <stop offset=".67" stop-color="#adadad"/>
+      <stop offset=".75" stop-color="#a4a4a4"/>
+      <stop offset=".82" stop-color="#969696"/>
+      <stop offset=".88" stop-color="#818181"/>
+      <stop offset=".93" stop-color="#6b6b6b"/>
+      <stop offset="1" stop-color="#d9d9d9"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_2" data-name="名称未設定グラデーション 2" x1="1446" y1="-660" x2="1446" y2="-731" gradientTransform="translate(0 865.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".07" stop-color="#6b6b6b"/>
+      <stop offset=".11" stop-color="#797979"/>
+      <stop offset=".21" stop-color="#919191"/>
+      <stop offset=".3" stop-color="#a2a2a2"/>
+      <stop offset=".41" stop-color="#acacac"/>
+      <stop offset=".54" stop-color="#b0b0b0"/>
+      <stop offset=".67" stop-color="#adadad"/>
+      <stop offset=".75" stop-color="#a4a4a4"/>
+      <stop offset=".82" stop-color="#969696"/>
+      <stop offset=".88" stop-color="#818181"/>
+      <stop offset=".93" stop-color="#6b6b6b"/>
+      <stop offset="1" stop-color="#d9d9d9"/>
+    </linearGradient>
+    <linearGradient id="_名称未設定グラデーション_3" data-name="名称未設定グラデーション 3" x1="1446" y1="-580" x2="1446" y2="-651" gradientTransform="translate(0 865.5)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".07" stop-color="#6b6b6b"/>
+      <stop offset=".11" stop-color="#797979"/>
+      <stop offset=".21" stop-color="#919191"/>
+      <stop offset=".3" stop-color="#a2a2a2"/>
+      <stop offset=".41" stop-color="#acacac"/>
+      <stop offset=".54" stop-color="#b0b0b0"/>
+      <stop offset=".67" stop-color="#adadad"/>
+      <stop offset=".75" stop-color="#a4a4a4"/>
+      <stop offset=".82" stop-color="#969696"/>
+      <stop offset=".88" stop-color="#818181"/>
+      <stop offset=".93" stop-color="#6b6b6b"/>
+      <stop offset="1" stop-color="#d9d9d9"/>
+    </linearGradient>
+    <mask id="ipad-cutout">
+      <!-- 全体を白で塗りつぶし -->
+      <rect x="0" y="0" width="1449" height="1888.5" fill="white"/>
+      <!-- くり抜きたい部分（画面部分）を黒で塗りつぶし -->
+      <rect x="62.25" y="63.75" width="1323" height="1759" rx="20" ry="20" fill="black"/>
+    </mask>
+  </defs>
+  <g mask="url(#ipad-cutout)">
+    <rect class="st7" x="1274" y=".5" width="71" height="6"/>
+    <rect class="st2" x="1443" y="134.5" width="6" height="71"/>
+    <rect class="st1" x="1443" y="214.5" width="6" height="71"/>
+    <path class="st0" d="M1445.5,88.46v1714.08c0,47.17-38.29,85.46-85.46,85.46H85.96c-47.17,0-85.46-38.29-85.46-85.46V88.46C.5,41.29,38.79,3,85.96,3h1274.08c47.17,0,85.46,38.29,85.46,85.46h0Z"/>
+    <path class="st5" d="M1442.5,88.46v1714.08c0,45.51-36.95,82.46-82.46,82.46H85.96c-45.51,0-82.46-36.95-82.46-82.46V88.46C3.5,42.95,40.45,6,85.96,6h1274.08c45.51,0,82.46,36.95,82.46,82.46h0Z"/>
+    <path class="st6" d="M1439.5,88.46v1714.08c0,43.85-35.6,79.46-79.46,79.46H85.96c-43.85,0-79.46-35.6-79.46-79.46V88.46C6.5,44.61,42.1,9,85.96,9h1274.08c43.85,0,79.46,35.6,79.46,79.46h0Z"/>
+    <path class="st4" d="M1438.5,88.46v1714.08c0,43.3-35.16,78.46-78.46,78.46H85.96c-43.3,0-78.46-35.16-78.46-78.46V88.46C7.5,45.16,42.66,10,85.96,10h1274.08c43.3,0,78.46,35.16,78.46,78.46h0Z"/>
+    <path d="M85.96,12h1274.08c42.2,0,76.46,34.26,76.46,76.46v1714.08c0,42.2-34.26,76.46-76.46,76.46H85.96c-42.2,0-76.46-34.26-76.46-76.46V88.46C9.5,46.26,43.76,12,85.96,12Z"/>
+  </g>
+</svg>
