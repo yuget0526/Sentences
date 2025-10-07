@@ -1,15 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
+
+import { Suspense, useEffect, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Newspaper } from "@/components/Newspaper";
 import { fetchBBCArticle } from "@/lib/api";
-import { BBCAPIResponse } from "@/types/bbc";
+import { BBCArticle } from "@/types/bbc";
 
-export default function NewsPage() {
+function NewsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const url = searchParams.get("url") || "";
-  const [article, setArticle] = useState<BBCAPIResponse | null>(null);
+  const [article, setArticle] = useState<BBCArticle | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -42,5 +43,13 @@ export default function NewsPage() {
       )}
       {article && <Newspaper article={article} />}
     </div>
+  );
+}
+
+export default function NewsPageWrapper() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <NewsPage />
+    </Suspense>
   );
 }

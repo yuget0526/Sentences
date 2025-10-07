@@ -8,8 +8,6 @@ export interface BBCArticle {
   content: string[][][]; // 段落 > 文 > 単語
 }
 
-export interface BBCAPIResponse extends BBCArticle {}
-
 export interface BBCNewsListItem {
   url: string;
   title: string;

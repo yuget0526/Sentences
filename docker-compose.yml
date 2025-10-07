@@ -8,13 +8,23 @@ services:
     volumes:
       - ./backend:/app
     command: uvicorn main:app --host 0.0.0.0 --port 8000
+    depends_on:
+      - redis
+    environment:
+      - REDIS_HOST=redis
+  redis:
+    image: redis:7
+    container_name: sentences-redis
+    ports:
+      - "6379:6379"
   frontend:
     build: ./frontend
     container_name: sentences-frontend
     ports:
       - "3000:3000"
-    volumes:
-      - ./frontend:/app
     depends_on:
       - backend
-    command: npx next start
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    command: npm run dev

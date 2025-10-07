@@ -1,9 +1,10 @@
-import { BBCAPIResponse } from "@/types/bbc";
+import { BBCArticle } from "@/types/bbc";
+import { fetchFreeDictionaryDefinition } from "@/lib/api";
 import React, { useState, useRef } from "react";
 
 // BBCの記事データを受け取り、新聞風のレイアウトで表示するコンポーネント
 export interface NewspaperProps {
-  article: BBCAPIResponse;
+  article: BBCArticle;
 }
 
 export const Newspaper: React.FC<NewspaperProps> = ({ article }) => {
@@ -21,15 +22,9 @@ export const Newspaper: React.FC<NewspaperProps> = ({ article }) => {
     e: React.MouseEvent<HTMLSpanElement>
   ) => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
-    // API取得は少し遅延させる
     timeoutRef.current = setTimeout(async () => {
       try {
-        const res = await fetch(
-          `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`
-        );
-        if (!res.ok) throw new Error("not found");
-        const data = await res.json();
-        // 意味抽出
+        const data = await fetchFreeDictionaryDefinition(word);
         const meaning =
           data[0]?.meanings?.[0]?.definitions?.[0]?.definition ||
           "No definition found.";
@@ -44,7 +39,6 @@ export const Newspaper: React.FC<NewspaperProps> = ({ article }) => {
       }
     }, 250);
   };
-
   // マウスが離れたらツールチップ非表示
   const handleMouseLeave = () => {
     if (timeoutRef.current) clearTimeout(timeoutRef.current);
@@ -53,8 +47,8 @@ export const Newspaper: React.FC<NewspaperProps> = ({ article }) => {
 
   return (
     <div
-      className="mx-auto max-w-4xl bg-newspaper text-on-newspaper p-8 shadow-lg border border-gray-200 "
-      style={{ position: "relative", zIndex: "var(--zIndex-contentNewspaper)" }}
+      className="mx-auto max-w-4xl bg-newspaper text-on-newspaper p-8 shadow-lg border border-gray-200 relative"
+      style={{ zIndex: "var(--zIndex-contentNewspaper)" }}
     >
       {/* ヘッダー */}
       <div className=" pb-4 mb-6">
@@ -142,7 +136,7 @@ export const Newspaper: React.FC<NewspaperProps> = ({ article }) => {
         </p>
       </div>
       <div
-        className="fixed top-0 right-0 bottom-0 left-0 bg-[url('/image/papernoise.webp')] bg-repeat opacity-[.16] pointer-events-none"
+        className="absolute top-0 right-0 bottom-0 left-0 bg-[url('/image/papernoise.webp')] bg-repeat opacity-[.16] pointer-events-none"
         style={{
           backgroundSize: "400px 400px",
           zIndex: "var(--zIndex-noiseNewspaper)",

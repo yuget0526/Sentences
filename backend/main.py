@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from api.get_sentences.bbc import get_bbc_data
 from api.get_news.bbc import get_bbc_news
+from api.dictionary import free_dictionary
 
 
 app = FastAPI(
@@ -34,6 +35,7 @@ def get_sentences_url_error(url: str, prefix: str) -> str:
         raise HTTPException(status_code=400, detail=f"URLは {prefix} で始まるBBCニュース記事のみ指定可能です")
     return url
 
+app.include_router(free_dictionary.router)
 
 @app.get(
     "/get_news/bbc",

@@ -1,8 +1,8 @@
-import { BBCAPIResponse, BBCNewsListResponse } from "@/types/bbc";
+import { BBCArticle, BBCNewsListResponse } from "@/types/bbc";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
-export async function fetchBBCArticle(url: string): Promise<BBCAPIResponse> {
+export async function fetchBBCArticle(url: string): Promise<BBCArticle> {
   const response = await fetch(
     `${API_BASE_URL}/get_sentences/bbc?url=${encodeURIComponent(url)}`
   );
@@ -20,6 +20,16 @@ export async function fetchBBCNewsList(): Promise<BBCNewsListResponse> {
     throw new Error(
       `BBCニュース一覧取得に失敗しました: ${response.statusText}`
     );
+  }
+  return response.json();
+}
+
+export async function fetchFreeDictionaryDefinition(word: string) {
+  const response = await fetch(
+    `${API_BASE_URL}/dictionary/freedictionary?word=${encodeURIComponent(word)}`
+  );
+  if (!response.ok) {
+    throw new Error(`辞書データ取得に失敗しました: ${response.statusText}`);
   }
   return response.json();
 }
